@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #21222A;
+    height: 90px;
+    padding: 3px 25px;
+}
+
+.head{
+    padding: 20px 700px ;
+    color: rgb(189, 31, 31);
+    align-self: center;
+}
+.App{
+    background-color: beige;
+}
+.repo{
+    font-size: large;
+    color: black;
+}
+.icon{
+    color: rgb(228, 231, 8);
+    font-size: small;
+}
