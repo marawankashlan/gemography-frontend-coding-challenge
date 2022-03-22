@@ -7,7 +7,7 @@ nav {
 }
 
 .head{
-    padding: 20px 700px ;
+    padding: 30px 700px ;
     color: rgb(189, 31, 31);
     align-self: center;
 }
@@ -22,3 +22,38 @@ nav {
     color: rgb(228, 231, 8);
     font-size: small;
 }
+
+.repo{
+    text-align: left;
+}
+.desc{
+    text-align: left;
+}
+.item1 {
+     grid-area: img;
+     width: 500px;
+     height: 500px;
+    }
+
+.item2 {
+     grid-area: repo;
+     }
+
+.item3 { grid-area: desc; }
+.item4 { grid-area: star; }
+
+.item7 {
+    grid-area: li; 
+    margin-left: 5%;
+    margin-right: 5%;
+ }
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'img img repo repo repo repo'
+      'img img desc desc desc desc'
+      'img img star star star star'
+      'li li li li li li';
+    gap: 10px;
+    padding: 10px;
+  }

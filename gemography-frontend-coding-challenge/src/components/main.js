@@ -1,6 +1,7 @@
 import React from "react"
 import axios from 'axios';
-import Icon from '@mui/material/Icon';
+import { AiFillStar } from 'react-icons/ai';
+import { BsRecordCircle } from 'react-icons/bs';
 import "./styles.css";
 
 class main extends React.Component {
@@ -21,30 +22,43 @@ class main extends React.Component {
 
     render() {
         var array=[]
+        var today = new Date();
+        
         this.state.arr.forEach(element => {
-            var uname=element.owner.login
-            var iss=element.open_issues_count
-            var des=element.description
-            var date=element.created_at
-            var stars=element.stargazers_count
-            var repo=element.name
-            array.push(<div>
+            let ndate=Date.parse(element.created_at)
+            //console.log(ndate)
+            array.push(<div className="grid-container">
                 <br/>
                 <br/>
-                <h2 className="repo">{repo}</h2>
-                <div>
-                    <Icon className="icon">star</Icon>;
-                    <p className="star">Stars: {stars}</p>
+                <div className="item1">
+                     <img src={element.owner.avatar_url} alt="display image" />
                 </div>
-                <p className="issue">{iss}</p>
-                <p className="uname">Submitted {date} by {uname}</p>
-                <hr/>
+                <div className="item2">
+                    <h2 className="repo">{element.name}</h2>
+                    <div className="item3">
+                        <p className="desc">{element.description}</p>
+                    </div>
+                    <div>
+                        <div>
+                            <div className="item4">
+                                <AiFillStar/>
+                                <p className="star">Stars: {element.stargazers_count}</p>
+                                <BsRecordCircle />
+                                <p className="issue">Issues: {element.open_issues_count}</p>
+                                
+                                <p className="uname">Submitted {element.created_at} by {element.owner.login}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <hr className="item7"/>
             </div>)
         });
         
             return (
                 <div className="App">
-                       
+                       {array}
                 </div>
           );
     }
