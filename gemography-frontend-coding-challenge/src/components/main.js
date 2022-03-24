@@ -27,32 +27,26 @@ class main extends React.Component {
         this.state.arr.forEach(element => {
             let ndate=Date.parse(element.created_at)
             //console.log(ndate)
-            array.push(<div className="grid-container">
+            array.push(<div>
                 <br/>
                 <br/>
-                <div className="item1">
+                <div className="media">
                      <img src={element.owner.avatar_url} alt="display image" />
-                </div>
-                <div className="item2">
-                    <h2 className="repo">{element.name}</h2>
-                    <div className="item3">
-                        <p className="desc">{element.description}</p>
-                    </div>
-                    <div>
+                        <div >
+                              <div><h2 className="repo">{element.name}</h2></div>
+                              <div><p className="desc">{element.description}</p></div>
+                        <div>
                         <div>
                             <div className="item4">
-                                <AiFillStar/>
-                                <p className="star">Stars: {element.stargazers_count}</p>
-                                <BsRecordCircle />
-                                <p className="issue">Issues: {element.open_issues_count}</p>
-                                
-                                <p className="uname">Submitted {element.created_at} by {element.owner.login}</p>
+                                <h5><AiFillStar/>  Stars: {element.stargazers_count}   <BsRecordCircle /> Issues: {element.open_issues_count} <small>Submitted {element.created_at} by {element.owner.login}</small></h5>
                             </div>
                         </div>
                     </div>
                     
                 </div>
-                <hr className="item7"/>
+                </div>
+                
+                <hr className="hr"/>
             </div>)
         });
         
