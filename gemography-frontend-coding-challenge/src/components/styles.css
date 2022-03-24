@@ -2,18 +2,18 @@
 nav {
     display: flex;
     align-items: center;
-    background-color: #21222A;
-    height: 90px;
+    background-color: #232924;
+    height: 70px;
     padding: 3px 25px;
 }
 
 .head{
-    padding: 30px 700px ;
+    padding: 15px 700px ;
     color: rgb(189, 31, 31);
     align-self: center;
 }
 .App{
-    background-color: beige;
+    background-color: rgb(136, 173, 157);
 }
 .repo{
     font-size: large;
@@ -21,20 +21,34 @@ nav {
 }
 .icon{
     color: rgb(228, 231, 8);
-    font-size: small;
+    font-size: medium;
 }
 
 .repo{
-    text-align: center;
+    padding-left: 3%;
+    text-align: left;
+    font-size: larger;
 }
 .desc{
+    padding-left: 3%;
     text-align: left;
+}
+.rest{
+    margin-left: 5mm;
 }
 .media img {
      width: 300px;
      height: 300px;
-    }
-
+     padding-left: 3%;
+}
+.box{
+    outline-style: solid;
+    font-size: medium;
+    margin-right: 10px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
 
 .hr {
     margin-left: 5%;

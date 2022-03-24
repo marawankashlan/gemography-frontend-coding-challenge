@@ -25,8 +25,13 @@ class main extends React.Component {
         var today = new Date();
         
         this.state.arr.forEach(element => {
-            let ndate=Date.parse(element.created_at)
-            //console.log(ndate)
+            let ndate=new Date(element.created_at)
+            let today = new Date()
+            let Difference_In_Time = today.getTime() - ndate.getTime();
+            // To calculate the no. of days between two dates
+            let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+            let days = Math.trunc(Difference_In_Days)
+
             array.push(<div>
                 <br/>
                 <br/>
@@ -37,8 +42,8 @@ class main extends React.Component {
                               <div><p className="desc">{element.description}</p></div>
                         <div>
                         <div>
-                            <div className="item4">
-                                <h5><AiFillStar/>  Stars: {element.stargazers_count}   <BsRecordCircle /> Issues: {element.open_issues_count} <small>Submitted {element.created_at} by {element.owner.login}</small></h5>
+                            <div >
+                                <h5 className="rest"><i className="box"><AiFillStar className="icon"/>  Stars: {element.stargazers_count}</i> <i className="box"><BsRecordCircle /> Issues: {element.open_issues_count} </i> <small>Submitted {days} days ago by {element.owner.login}</small></h5>
                             </div>
                         </div>
                     </div>
