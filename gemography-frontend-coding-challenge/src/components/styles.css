@@ -2,18 +2,18 @@
 nav {
     display: flex;
     align-items: center;
-    background-color: #070f4e;
+    background-color: #393e46;
     height: 70px;
     padding: 3px 25px;
 }
 
 .head{
-    padding: 15px 700px ;
-    color: #2772db;
+    padding: 15px 480px ;
+    color:  #d3d1d1;
     align-self: center;
 }
 .App{
-    background-color: #f5ebeb;
+    background-color: #fffdfd;
 }
 .repo{
     font-size: large;
@@ -50,7 +50,7 @@ nav {
     padding-right: 3px;
 }
 .card{
-    background-color: #3ab1c8;
+    background-color: #929aab;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;

@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav className="nav">
             <h3 className="head">
-                Challenge
+            Gemography Front-end Coding Challenge
             </h3>
         </nav>
     )
