@@ -67,7 +67,10 @@ class main extends React.Component {
           .then(res => {
             pageTemp++;
             const Response_arr = res.data.items;
-            this.setState({ arr:Response_arr,isLoading: false,page:pageTemp });
+            this.setState({ 
+              arr:[...this.state.arr,...Response_arr],
+              isLoading: false,
+              page:pageTemp });
           })
           .catch((err)=>{
             this.setState({error: err.message,
@@ -81,7 +84,7 @@ class main extends React.Component {
 
     render() {
         var array=[]
-        
+        console.log("array ",this.state.arr)
         this.state.arr.forEach(element => {
             let ndate=new Date(element.created_at)
             let today = new Date()
