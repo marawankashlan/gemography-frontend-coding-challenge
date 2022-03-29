@@ -48,7 +48,7 @@ class main extends React.Component {
      
       if(this.state.page==1){
             this.setState({ isLoading: true },()=> {
-              axios.get(`https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc`)
+              axios.get(`https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&per_page=100&order=desc`)
               .then(res => {
                 //calculate the next page number and save it in the state
                 let pageTemp=this.state.page;
@@ -68,7 +68,7 @@ class main extends React.Component {
       else{
         let pageTemp=this.state.page;
         this.setState({ isLoading: true },()=> {
-          axios.get(`https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc&page=`+pageTemp)
+          axios.get(`https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&per_page=100&order=desc&page=`+pageTemp)
           .then(res => {
             pageTemp++;
             const Response_arr = res.data.items;
