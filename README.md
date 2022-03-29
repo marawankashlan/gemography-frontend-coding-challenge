@@ -4,12 +4,12 @@
  You will be able to see for each repo: the repo's name, description, number of stars, number of issues, Username and avatar of the owner.
  You will  be able to keep scrolling and new results will appear (100 repo per page).
 
-Libraries:
+# Libraries:
  1-Axios: i used this lib to call the github api and get the data.
  2-react-icons: i used this lib to put the star and issues icons in my project.
  3-lodash.debounce: this lib is used to handle bursting events like window resize, scrolling, user typing into an input, and i have used it to help me in the scrolling.
  4-bootstrap.min.css: i used this lib to help me organize the components position.
  
-How to run:
+# How to run:
  1-open the terminal the type: cd gemography-frontend-coding-challenge
                                npm start
