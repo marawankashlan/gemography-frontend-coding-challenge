@@ -2,15 +2,20 @@
 nav {
     display: flex;
     align-items: center;
+    text-align: center;
     background-color: #393e46;
     height: 70px;
     padding: 3px 25px;
 }
 
 .head{
-    padding: 15px 480px ;
     color:  #d3d1d1;
+    position: absolute;
+    top: 15px;
+    left:0;
+    right:0;
     align-self: center;
+    text-align: center;
 }
 .App{
     background-color: #fffdfd;
@@ -28,10 +33,12 @@ nav {
     padding-left: 3%;
     text-align: left;
     font-size: larger;
+    width: 700px;
 }
 .desc{
     padding-left: 3%;
     text-align: left;
+    
 }
 .rest{
     margin-left: 5mm;
@@ -56,8 +63,8 @@ nav {
     margin-left: 5px;
     margin-right: 5px;
 }
-/* 
-.hr {
-    margin-left: 5%;
-    margin-right: 5%;
- } */
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

@@ -33,7 +33,7 @@ class main extends React.Component {
         const html = document.documentElement;
         const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
         const windowBottom = windowHeight + window.pageYOffset;
-        if (windowBottom >= docHeight) {
+        if (windowBottom >= docHeight ) {
             loadPage()
         }
       }, 100);
@@ -100,15 +100,19 @@ class main extends React.Component {
             // To calculate the no. of days between two dates
             let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
             let days = Math.trunc(Difference_In_Days)
+            let temp=""
+            if(element.description){
+              temp=element.description.slice(0,5)
+            }
           //push the page style in an array
             array.push(<div className="card">
                 <br/>
                 <br/>
                 <div className="media">
                      <img src={element.owner.avatar_url} alt="display image" />
-                        <div >
+                        <div className="flex-container">
                               <div><h2 className="repo">{element.name}</h2></div>
-                              <div><p className="desc">{element.description}</p></div>
+                              <div className="desc">{element.description}</div>
                               <div >
                                 <h5 className="rest"><i className="box"><AiFillStar className="icon"/>  Stars: {element.stargazers_count}</i> <i className="box"><BsRecordCircle /> Issues: {element.open_issues_count} </i> <small>Submitted {days} days ago by {element.owner.login}</small></h5>
                             </div>
